@@ -88,11 +88,8 @@ $('h4').remove();
 $('ol').remove();
 $('aside').append('<p>We feel sad that a list ever appeared here.  Won\'t happen again, eh</p>');
 
-$('.form-control').on('click', function() {
-  let red = $(".form-control").eq(0).val();
-  let blue = $(".form-control").eq(1).val();
-  let green = $(".form-control").eq(2).val();
-  $(body).css('background-color', "rgb(" + red + "," + green + "," + blue + ")");
+$('input').on('keydown click', function() {
+  $('body').css('background-color', 'rgb(' + $(".form-control").eq(0).val() + ',' +  $(".form-control").eq(2).val() + ',' + $(".form-control").eq(1).val() + ')');
 });
 
 $('img').on('click', function() {
@@ -103,3 +100,5 @@ $('img').on('click', function() {
 </body>
 
 </html>
+
+|| 'keydown'
